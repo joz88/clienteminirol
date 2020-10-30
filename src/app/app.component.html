@@ -1,0 +1,10 @@
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a *ngIf="!autenticado()" class="nav-link" href="/login">Login</a>
+
+    <a *ngIf="autenticado()" (click)="logout()" class="nav-link" href="login">Log out</a>
+  </li>
+
+</ul>
+
+<router-outlet></router-outlet>

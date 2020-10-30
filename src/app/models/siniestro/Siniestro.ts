@@ -1,0 +1,19 @@
+export class Siniestro {
+    id:number;
+    ajustador:number;
+    aseguradora:string;
+    conductor:string;
+    descripcion:string;
+    direccion:string;
+    estatus:string;
+    estatusSiniestro:string;
+    idCliente:number;
+    idPush:number;
+    idSiniestro:number;
+    latitud:string;
+    longitud:string;
+    numeroSiniestro:string;
+    poliza:string;
+    ramo:string;
+    time:string;
+  }

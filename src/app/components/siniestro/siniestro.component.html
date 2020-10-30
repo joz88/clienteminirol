@@ -1,0 +1,122 @@
+<div class="col-sm-12">
+    <div class="card bg-light mb-3">
+      <div class="card-header">Siniestro</div>
+      <div class="card-body">
+    
+        <form #SiniestroForm=ngForm>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>ajustador</label>
+              <input type="number" class="form-control" name="ajustador" #ajustador="ngModel" [(ngModel)]="siniestro.ajustador"  placeholder="idAjustador"  required>
+      
+            </div>
+        
+            <div class="form-group col-md-6">
+              <label>aseguradora</label>
+              <input type="text" class="form-control" name="aseguradora" #aseguradora="ngModel" [(ngModel)]="siniestro.aseguradora"  placeholder="Nombre Aseguradora" >
+              
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>conductor</label>
+              <input type="text" class="form-control" name="conductor" #conductor="ngModel" [(ngModel)]="siniestro.conductor"  placeholder="conductor" >
+            </div>
+            
+            <div class="form-group col-md-6">
+              <label>descripcion</label>
+              <input type="text" class="form-control" name="descripcion" #descripcion="ngModel" [(ngModel)]="siniestro.descripcion"  placeholder="descripcion"  >
+            </div>
+            
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>estatus</label>
+              <input type="text" class="form-control" name="estatus" #estatus="ngModel" [(ngModel)]="siniestro.estatus"  placeholder="1"  value="1">
+              
+            </div>
+            <div class="form-group col-md-6">
+              <label>estatusSiniestro</label>
+              <input type="text" class="form-control" name="estatusSiniestro" #estatusSiniestro="ngModel" [(ngModel)]="siniestro.estatusSiniestro"  placeholder="POR ASIGANAR AJUSTADOR" value="POR ASIGANAR AJUSTADOR" >
+            </div>      
+          </div>
+        
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>idCliente</label>
+              <input type="number" class="form-control" name="idCliente" #idCliente="ngModel" [(ngModel)]="siniestro.idCliente"  placeholder="idCliente" required>
+              
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>idPush</label>
+              <input type="number" class="form-control" name="idPush" #idPush="ngModel" [(ngModel)]="siniestro.idPush"  placeholder="idPush" value="0">
+              
+            </div>
+
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>idSiniestro</label>
+              <input type="number" class="form-control" name="idSiniestro" #idSiniestro="ngModel" [(ngModel)]="siniestro.idSiniestro"  placeholder="idSiniestro" required>
+              
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>latitud</label>
+              <input type="text" class="form-control" name="latitud" #latitud="ngModel" [(ngModel)]="siniestro.latitud"  placeholder="latitud">
+              
+            </div>
+
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>longitud</label>
+              <input type="text" class="form-control" name="longitud" #longitud="ngModel" [(ngModel)]="siniestro.longitud"  placeholder="longitud">
+              
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>numeroSiniestro</label>
+              <input type="text" class="form-control" name="numeroSiniestro" #numeroSiniestro="ngModel" [(ngModel)]="siniestro.numeroSiniestro"  placeholder="numeroSiniestro" >
+              
+            </div>
+
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>poliza</label>
+              <input type="text" class="form-control" name="poliza" #poliza="ngModel" [(ngModel)]="siniestro.poliza"  placeholder="poliza" >
+              
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>ramo</label>
+              <input type="number" class="form-control" name="ramo" #ramo="ngModel" [(ngModel)]="siniestro.ramo"  placeholder="ramo" value="2">
+              
+            </div>
+
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>time</label>
+              <input type="text" class="form-control" name="time" #time="ngModel" [(ngModel)]="siniestro.time"  placeholder="00:00" required value="00:00">
+              
+            </div>
+
+           
+
+          </div>
+        
+          <button type="submit" class="btn btn-primary" (click)='enviarPush()'  [disabled]="!SiniestroForm.form.valid">Crear</button>
+      
+        
+        
+        </form>
+        
+    
+      </div>
+    </div>
+    
+    
